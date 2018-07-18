@@ -1,0 +1,137 @@
+GIT:
+
+Version Control System for tracking changes in computer files
+
+2005 by Linus Trovalds (Creator of Linux)
+
+Need no language or framework
+
+- Distributed/decentralized version control system
+   Many developers can work on a project without having to be on the same network
+
+- Co ordinates work between multiple developers
+  Tracks any change in the files in the project
+- Who made what changes and when
+- Can revert back to any version of any file which was committed to the repository
+- A Local repository is maintained in local system which are pushed to remote repository once changes are complete
+github/bitbucket
+
+Concepts:
+- Keeps track of code history
+- Takes snapshots of our files
+- We can decide when to take snapshot by making commit
+- We can visit any snapshot at any time
+- We can put code in a staging area before commit and writing to snapshot
+- After commit, other developers can pull code into their machines
+
+Basic Commands
+$ git init
+ - initializes the local git repository
+it creates a hidden .git folder in that project
+$ git add <file>
+ - will add file(s) to the staging area or index, which will be ready for commit
+$ git status
+ - to see what is in staging area and the path
+$ git commit 
+ - will take from staging area and put in local repository
+$ git push 
+ - will push files in local repository into the remote repository
+$ git pull
+ - to pull from remote repository to local repository
+$ git clone
+ - will copy remote repository into current folder
+--------------------------------------------------------------------------------
+Installing git
+
+windows: 
+   http://git-scm.com/download/win
+
+Install git
+
+start-> gitbash
+OR cmd
+
+on your folder right click and select Git Bash Here
+
+$ git --version
+
+ctrl + for increase size
+
+$ touch myapp.js
+  - will create a file
+
+$ git init
+  - Initialize the folder as git repository
+  -  it creates a .git folder in the directory
+
+$ git config --global user.name 'Surendran Velath'
+$ git config --global user.email 'surendan@gmail.com'
+
+$ git add index.html
+  - adds to staging area
+
+$ git status
+  - will show changes to be committed and untracked
+$ git add *.html
+  - for .html files
+$ git add .
+  - for all files
+
+$ clear
+  - for clear screen
+
+$ git commit
+i  -> for insert mode
+add Initial commit
+
+press esc
+
+:wq
+ -  save and exit
+
+edit a file say myapp.js
+
+$ git add .
+$ git commit -m 'Changed myapp.js'
+create two more files
+
+$ touch .gitignore
+$ touch log.txt
+edit .gitignore and insert log.txt
+$ git add .
+   - the log.txt will be ignored
+$ git commit -m 'more changes'
+
+to change from branch master, create a branch
+$ git branch mybranch
+$ git checkout mybranch
+$ clear
+   - clears screen
+create home.html
+$ git add .
+$ git commit -m 'added home.html'
+$ git checkout master
+  - > the new file and changes in others will disappear
+$ git merge mybranch
+  - now it will reappear
+
+Login to github
+
+Create new repository
+ click on top right + sign and choose new repository
+ / myrepo
+
+$ git remote add origin https://github.com/<username>/<reponame>.git
+$ git remote 
+   - origin
+
+$ git push -u origin master
+
+$ git clone https://github.com/sundervel1/grocery.git
+
+
+$ git pull
+ - for getting updated files
+
+
+
