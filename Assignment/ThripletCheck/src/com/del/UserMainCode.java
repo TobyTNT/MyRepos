@@ -2,7 +2,7 @@ package com.del;
 
 public class UserMainCode {
 
-	public boolean checkTripplets(int arr[]) {
+	public static boolean checkTripplets(int arr[]) {
 		int len=arr.length;
 		for(int i=0;i<(len-2);i++)
 		{
